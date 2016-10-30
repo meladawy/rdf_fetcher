@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_skos_definition
+    - taxonomy.vocabulary.interactivity_level
+id: taxonomy_term.interactivity_level.field_skos_definition
+field_name: field_skos_definition
+entity_type: taxonomy_term
+bundle: interactivity_level
+label: 'Skos definition'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

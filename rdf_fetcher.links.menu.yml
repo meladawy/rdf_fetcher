@@ -1,0 +1,5 @@
+rdf_fetcher.config:
+  title: RDF Fetcher
+  description: 'Fetch and synchronize data with current taxonomy entity'
+  parent: system.admin_structure
+  route_name: rdf_fetcher.config

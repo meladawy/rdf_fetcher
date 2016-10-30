@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_uri
+    - taxonomy.vocabulary.interactivity_level
+  module:
+    - link
+id: taxonomy_term.interactivity_level.field_uri
+field_name: field_uri
+entity_type: taxonomy_term
+bundle: interactivity_level
+label: Uri
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

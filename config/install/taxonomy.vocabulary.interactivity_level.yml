@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Interactivity Level'
+vid: interactivity_level
+description: ''
+hierarchy: 0
+weight: 0

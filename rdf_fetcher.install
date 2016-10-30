@@ -1,0 +1,42 @@
+<?php
+
+/**
+* @file
+* Contains install functions to import data upon installation
+*/
+
+
+
+/**
+* Implements hook_install()
+* to run batch process upon module installation
+*/
+function rdf_fetcher_install() {
+  $vocabulary_type = \Drupal::config('rdf_fetcher.variables')->get("vocabulary_type");
+  $resource_url = \Drupal::config('rdf_fetcher.variables')->get("resource_url");
+
+  // Load Batch operations
+  $batch = array(
+  'title' => t('Importing Interactivity levels...'),
+  'operations' => array(
+    array(
+      '\Drupal\rdf_fetcher\InteractivityLevelsOperations::loadInteractivityLevels',
+      array($resource_url)
+    ),
+    array(
+      '\Drupal\rdf_fetcher\InteractivityLevelsOperations::createInteractivityLevels',
+      array($vocabulary_type)
+    ),
+    array(
+      '\Drupal\rdf_fetcher\InteractivityLevelsOperations::deleteAdditionalLevels',
+      array($vocabulary_type)
+    ),
+  ),
+
+  );
+  batch_set($batch);
+  // Because i belive drush_backend_batch_process is not in the core
+  if(function_exists('drush_backend_batch_process')) {
+    drush_backend_batch_process();
+  }
+}

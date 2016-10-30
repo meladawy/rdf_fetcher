@@ -1,0 +1,66 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.interactivity_level.field_identifier
+    - field.field.taxonomy_term.interactivity_level.field_skos_definition
+    - field.field.taxonomy_term.interactivity_level.field_skos_notation
+    - field.field.taxonomy_term.interactivity_level.field_uri
+    - taxonomy.vocabulary.interactivity_level
+  module:
+    - link
+    - path
+    - text
+id: taxonomy_term.interactivity_level.default
+targetEntityType: taxonomy_term
+bundle: interactivity_level
+mode: default
+content:
+  description:
+    type: text_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_identifier:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_skos_definition:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+  field_skos_notation:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_uri:
+    weight: 34
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  name:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

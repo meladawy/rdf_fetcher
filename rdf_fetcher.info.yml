@@ -1,0 +1,12 @@
+name: RDF Fetcher
+type: module
+description: 'Custom module to fetch RDF source'
+core: 8.x
+configure: rdf_fetcher.config
+hidden: false
+dependencies:
+  - field
+  - link
+  - path
+  - taxonomy
+  - text

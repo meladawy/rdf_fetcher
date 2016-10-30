@@ -1,0 +1,7 @@
+rdf_fetcher.config:
+  path: '/admin/structure/rdf-fetcher'
+  defaults:
+    _form: '\Drupal\rdf_fetcher\Form\SyncInteractivity'
+    _title: 'RDF Fetcher Sync'
+  requirements:
+    _permission: 'synchronize interactivity'
